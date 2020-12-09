@@ -7,7 +7,7 @@ public class Tour implements IPile<Disque>{
 
 	int hauteurMax = 3;
 	
-	Queue<Disque> disques=new ArrayDeque<>();
+	Queue<Disque> disques = new ArrayDeque<>();
 	
 	@Override
 	public boolean empiler(Disque d) {

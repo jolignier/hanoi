@@ -7,7 +7,9 @@ public class Hanoi {
 	Tour tourDest;
 
 	public Hanoi(int n){
-		// TODO ...
+		tourInit = new Tour(n);
+		tourInter = new Tour(n);
+		tourDest = new Tour(n);
 	}
 
 	
@@ -45,20 +47,22 @@ public class Hanoi {
 	public static void main(String[] args) {
 		// Compléter la classe Hanoi pour résoudre le jeux avec 3 disques :
 		Hanoi game = new Hanoi();
-		System.out.println(game.tourInit.estVide());
+		System.out.println("---------------- AVANT LA PARTIE ----------------");
+		System.out.println(game.tourInit.estPleine());
 		System.out.println(game.tourDest.estVide());
 		game.jouer();
+		System.out.println("---------------- APRES LA PARTIE ----------------");
 		System.out.println(game.tourInit.estVide());
-		System.out.println(game.tourDest.estVide());
+		System.out.println(game.tourDest.estPleine());
 		
 		// Compléter la classe Hanoi pour résoudre le jeux avec n disques :
-		int n =100;
+		/*int n = 100;
 		Hanoi gameN = new Hanoi(n);
 		System.out.println(gameN.tourInit.estVide());
 		System.out.println(gameN.tourDest.estVide());
 		gameN.jouer();
 		System.out.println(gameN.tourInit.estVide());
-		System.out.println(gameN.tourDest.estVide());
+		System.out.println(gameN.tourDest.estVide());*/
 		
 	}
 
